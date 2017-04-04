@@ -13,18 +13,33 @@
     tools:context="blackriders.dummyproject.MainActivity">
 
     <LinearLayout
+        android:id="@+id/layout_data"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edit_search"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
-            android:hint="Enter something to search"
-            android:paddingLeft="10dp"
-            android:textSize="14dp" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Enter something to search"
+                android:paddingLeft="10dp"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_search_category_default" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
@@ -66,6 +81,11 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:background="#CCCCCC" />
-
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_data" />
 </RelativeLayout>
